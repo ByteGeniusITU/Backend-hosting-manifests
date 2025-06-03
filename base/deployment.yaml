@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hosting-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hosting-app
+  template:
+    metadata:
+      name: hosting-management
+      labels:
+        app: hosting-app
+    spec:
+      serviceAccountName: hosting-management
+      containers:
+        - name: hosting-management
+          ports:
+            - containerPort: 8000
+          env:
+            - name: APP_APPLICATION__PORT
+              value: "8000"
+            - name: APP_APPLICATION__ADDRESS
+              value: "0.0.0.0"
+      imagePullSecrets:
+        - name: regcred
