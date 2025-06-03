@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: hosting-management
-          image: bytegenius/hosting-management:v0.1-staging
+          image: bytegenius/hosting-management:v3.3-staging
