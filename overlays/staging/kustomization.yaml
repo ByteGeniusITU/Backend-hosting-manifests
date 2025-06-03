@@ -1,0 +1,10 @@
+namePrefix: staging-
+commonLabels:
+  variant: staging
+#commonAnnotations: # Para aplicar anotaciones en todos los yamls especificados en resources
+  #note: Hello, I am staging! 
+resources:
+- ../../base
+patches:
+- path: replica_patch.yaml
+#- path: map.yaml
