@@ -16,7 +16,6 @@ spec:
       serviceAccountName: hosting-management
       containers:
         - name: hosting-management
-          image: bytegenius/hosting_management:latest
           ports:
             - containerPort: 8000
           env:
