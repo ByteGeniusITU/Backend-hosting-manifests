@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hosting-deployment
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: hosting-management
+          image: bytegenius/hosting-management:v0.1-staging
