@@ -6,5 +6,5 @@ commonLabels:
 resources:
 - ../../base
 patches:
-- path: replica_patch.yaml
+- path: deployment_patch.yaml
 #- path: map.yaml
