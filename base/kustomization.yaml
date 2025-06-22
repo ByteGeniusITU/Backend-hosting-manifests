@@ -3,8 +3,6 @@ kind: Kustomization
 metadata:
   name: base
 
-namespace: microservices
-
 commonLabels:
    infra: hosting
 
