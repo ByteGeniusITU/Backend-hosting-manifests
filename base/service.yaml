@@ -4,10 +4,9 @@ metadata:
   name: hosting-service
   namespace: microservices
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: hosting-app
   ports:
   - port: 8000
     targetPort: 8000
-    nodePort: 30011
