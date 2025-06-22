@@ -3,8 +3,9 @@ kind: ClusterRole
 metadata:
   name: helm-role
 rules:
-  - apiGroups: ["", "apps"]
+  - apiGroups: ["", "metrics.k8s.io", "apps"]
     resources:
+      - podmetrics
       - pods
       - services
       - deployments
