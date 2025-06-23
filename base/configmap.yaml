@@ -5,6 +5,6 @@ metadata:
   namespace: microservices
 data:
   applicationPort: "8000"
-  appllicationAddress: 0.0.0.0
+  applicationAddress: 0.0.0.0
 
 
