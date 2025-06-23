@@ -19,17 +19,16 @@ spec:
         - name: hosting-management
           ports:
             - containerPort: 8000
-          volumeMounts:
-            - name: vol-config
-              mountPath: /etc/hosting
-          #env:
-            #- name: APP_APPLICATION__PORT
-            #  value: "8000"
-            #- name: APP_APPLICATION__ADDRESS
-            #  value: "0.0.0.0"
+          env:
+            - name: APP_APPLICATION__PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: hosting-configuration
+                  key: applicationPort
+            - name: APP_APPLICATION__ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: hosting-configuration
+                  key: applicationAddress
       imagePullSecrets:
         - name: regcred
-      volumes:
-        - name: vol-config
-          configMap:
-            name: hosting-configuration

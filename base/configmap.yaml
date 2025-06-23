@@ -4,7 +4,7 @@ metadata:
   name: hosting-configuration
   namespace: microservices
 data:
-  APP_APPLICATION__PORT: "8000"
-  APP_APPLICATION__ADDRESS: 0.0.0.0
+  applicationPort: "8000"
+  appllicationAddress: 0.0.0.0
 
 
