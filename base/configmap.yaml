@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hosting-configuration
+  namespace: microservices
+data:
+  APP_APPLICATION__PORT: "8000"
+  APP_APPLICATION__ADDRESS: 0.0.0.0
+
+
