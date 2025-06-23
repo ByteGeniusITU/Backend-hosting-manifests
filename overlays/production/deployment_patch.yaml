@@ -9,4 +9,4 @@ spec:
     spec:
       containers:
         - name: hosting-management
-          image: bytegenius/hosting_management:v0.4-production
+          image: bytegenius/hosting_management:v0.5-production
